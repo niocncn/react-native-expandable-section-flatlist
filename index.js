@@ -41,12 +41,14 @@ class ExpanableList extends Component {
     headerOnPress: PropTypes.func,
     isOpen: PropTypes.bool,
     openOptions: PropTypes.array,
+    activeOpacity: PropTypes.number
   };
 
   static defaultProps = {
     headerKey: 'header',
     memberKey: 'member',
     isOpen: false,
+    activeOpacity:0.7
   };
 
   _keyExtractor = (item, index) => index;
@@ -75,7 +77,7 @@ class ExpanableList extends Component {
 
     return (
       <View>
-        <TouchableOpacity onPress={() => this._onPress(sectionId)}>
+        <TouchableOpacity activeOpacity={this.props.activeOpacity} onPress={() => this._onPress(sectionId)}>
           { renderSectionHeaderX ? renderSectionHeaderX(item[headerKey], sectionId) : null}
         </TouchableOpacity>
         <ScrollView scrollEnabled={false}>
