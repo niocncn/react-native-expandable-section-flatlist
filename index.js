@@ -78,7 +78,7 @@ class ExpanableList extends Component {
     return (
       <View>
         <TouchableOpacity activeOpacity={this.props.activeOpacity} onPress={() => this._onPress(sectionId)}>
-          { renderSectionHeaderX ? renderSectionHeaderX(item[headerKey], sectionId) : null}
+          { renderSectionHeaderX ? renderSectionHeaderX(item[headerKey], sectionId, item) : null}
         </TouchableOpacity>
         <ScrollView scrollEnabled={false}>
           {
