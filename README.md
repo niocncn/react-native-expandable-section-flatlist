@@ -80,6 +80,7 @@ class Example extends React.PureComponent {
 | headerOnPress | false | `boolean` | 点击打开关闭列表分组组头的回调 |
 | isOpen | false | `boolean` | 默认是否打开全部分组 |
 | openOptions | - | `array` | 可选单独打开某几个分组 |
+| activeOpacity | - | `number` | activeOpacity for TouchableOpacity Header |
 
 
 Licence
