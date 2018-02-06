@@ -85,7 +85,7 @@ class ExpanableList extends Component {
             memberArr.map((rowItem, rowId) => {
               return (
                 <View key={rowId}>
-                  {renderRow ? renderRow(rowItem, rowId, index) : null}
+                  {renderRow ? renderRow(rowItem, rowId, index, memberArr) : null}
                 </View>
               );
             })
